@@ -1,0 +1,48 @@
+{
+  "name": "is-today-special",
+  "version": "1.0.0",
+  "description": "Is today's Wordscapes Daily Puzzle special? The April Fools prank, birthday week, the 36 flagged days and the calendar's oddities, from the Solving Wordscapes daily puzzles study.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./core": "./src/core.js",
+    "./data": "./data/special-days.json"
+  },
+  "bin": {
+    "is-today-special": "./bin/cli.js"
+  },
+  "files": [
+    "src/",
+    "bin/",
+    "data/special-days.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "build:docs": "node scripts/build-docs.js",
+    "start": "node bin/cli.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "wordscapes",
+    "wordscapes-daily",
+    "daily-puzzle",
+    "word-game",
+    "calendar",
+    "peoplefun"
+  ],
+  "author": "Pop (Solving Wordscapes) <https://www.solvingwordscapes.com/author/pop/>",
+  "homepage": "https://www.solvingwordscapes.com/wordscapes-daily-puzzles-study/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PopKornmm/is-today-special.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PopKornmm/is-today-special/issues"
+  },
+  "license": "MIT"
+}

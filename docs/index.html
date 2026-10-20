@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is today's Wordscapes Daily Puzzle special?</title>
+<meta name="description" content="Check whether today's Wordscapes Daily Puzzle is one of the special days of the fixed 366-day calendar: the April Fools prank, birthday week, the 36 flagged days and more.">
+<link rel="canonical" href="https://popkornmm.github.io/is-today-special/">
+<meta property="og:title" content="Is today's Wordscapes Daily Puzzle special?">
+<meta property="og:description" content="One question, one answer, straight from the Wordscapes daily puzzles study.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Is today's Wordscapes Daily Puzzle special?",
+  "url": "https://popkornmm.github.io/is-today-special/",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "isBasedOn": "https://www.solvingwordscapes.com/wordscapes-daily-puzzles-study/",
+  "author": { "@type": "Person", "name": "Pop", "url": "https://www.solvingwordscapes.com/author/pop/" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<style>
+  :root {
+    --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --muted: #94a3b8;
+    --accent: #fbbf24; --yes: #f97316; --no: #38bdf8; --line: #334155; --btn: #fbbf24; --btn-text: #0f172a;
+  }
+  html.light {
+    --bg: #fdf6e3; --card: #ffffff; --text: #1e293b; --muted: #64748b;
+    --accent: #b45309; --yes: #c2410c; --no: #0369a1; --line: #e7dcc3; --btn: #1e293b; --btn-text: #fdf6e3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; }
+  header { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 20px; }
+  header h1 { font-size: 1.1rem; margin: 0; font-weight: 600; color: var(--muted); }
+  .toggle { background: none; border: 1px solid var(--line); color: var(--text); border-radius: 999px; padding: 6px 12px; cursor: pointer; font-size: .9rem; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 28px 22px; text-align: center; }
+  .date { color: var(--muted); font-size: 1rem; margin: 0 0 6px; }
+  .verdict { font-size: clamp(2.6rem, 10vw, 4rem); font-weight: 800; margin: 0; line-height: 1.1; letter-spacing: -.02em; }
+  .verdict.yes { color: var(--yes); } .verdict.no { color: var(--no); }
+  .reason { margin: 18px 0 0; font-size: 1.05rem; }
+  .reason strong { color: var(--accent); }
+  .reasons { list-style: none; padding: 0; margin: 18px 0 0; text-align: left; }
+  .reasons li { padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; margin-bottom: 10px; }
+  .reasons .tag { display: inline-block; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
+  .reasons .acc .tag { color: var(--muted); }
+  .cta { display: inline-block; margin-top: 24px; background: var(--btn); color: var(--btn-text); text-decoration: none; font-weight: 700; padding: 14px 22px; border-radius: 12px; font-size: 1.05rem; }
+  .cta:active { transform: translateY(1px); }
+  .nav { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; gap: 10px; }
+  .nav button, .nav input { background: var(--card); color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 1rem; }
+  .nav button { cursor: pointer; }
+  .foot { color: var(--muted); font-size: .92rem; margin-top: 28px; }
+  .foot a { color: var(--text); }
+  .slot { color: var(--muted); font-size: .9rem; margin-top: 8px; }
+  @media (max-width: 420px) { .nav { flex-wrap: wrap; } .nav input { flex: 1 1 100%; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Is today's Wordscapes Daily Puzzle special?</h1>
+    <button class="toggle" id="theme" aria-label="Toggle light and dark theme">☀️ / 🌙</button>
+  </header>
+
+  <section class="card" id="card" aria-live="polite">
+    <p class="date" id="date">Loading…</p>
+    <p class="verdict" id="verdict">…</p>
+    <p class="reason" id="reason"></p>
+    <ul class="reasons" id="reasons"></ul>
+    <a class="cta" id="cta" href="https://www.solvingwordscapes.com/category/daily/" rel="noopener">See today's answer →</a>
+    <p class="slot" id="slot"></p>
+  </section>
+
+  <div class="nav">
+    <button id="prev" aria-label="Previous day">← Yesterday</button>
+    <input type="date" id="pick" aria-label="Pick a date">
+    <button id="next" aria-label="Next day">Tomorrow →</button>
+  </div>
+
+  <p class="foot">
+    The Daily Puzzle runs on a fixed 366-day calendar: the same date brings back the same puzzle every year.
+    Every special day on this page comes from the study
+    <a href="https://www.solvingwordscapes.com/wordscapes-daily-puzzles-study/" rel="noopener">Inside the Wordscapes Daily Puzzles: The Secret Calendar</a>
+    by <a href="https://www.solvingwordscapes.com/author/pop/" rel="noopener">Pop</a>.
+    No letters, no grids, no answers live here — the answer is on the
+    <a href="https://www.solvingwordscapes.com/category/daily/" rel="noopener">Wordscapes Daily Puzzle Answers</a> page.
+    Source code on <a href="https://github.com/PopKornmm/is-today-special" rel="noopener">GitHub</a>.
+  </p>
+</main>
+
+<script type="module">
+  import data from './data.js';
+  import { checkDate } from './core.js';
+
+  const $ = (id) => document.getElementById(id);
+  const html = document.documentElement;
+  try { if (localStorage.getItem('its_theme') === 'light') html.classList.add('light'); } catch {}
+  $('theme').onclick = () => {
+    html.classList.toggle('light');
+    try { localStorage.setItem('its_theme', html.classList.contains('light') ? 'light' : 'dark'); } catch {}
+  };
+
+  const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  const fromQuery = new URLSearchParams(location.search).get('date');
+  let current = fromQuery ? new Date(fromQuery + 'T12:00:00') : new Date();
+  if (Number.isNaN(current.getTime())) current = new Date();
+
+  function render() {
+    const todayIso = iso(new Date());
+    const isToday = iso(current) === todayIso;
+    const r = checkDate(data, current);
+    $('date').textContent = (isToday ? 'Today, ' : '') + current.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+    $('verdict').textContent = r.special ? 'YES' : 'NO';
+    $('verdict').className = 'verdict ' + (r.special ? 'yes' : 'no');
+    $('reason').innerHTML = r.special
+      ? `${r.reasons.length > 1 ? 'Several reasons' : 'One reason'}: <strong>${r.reasons.map((x) => x.title).join('</strong> and <strong>')}</strong>.`
+      : (r.next ? `A regular daily. Next special one: <strong>${r.next.label}</strong> (${r.next.title}), in ${r.next.inDays} day${r.next.inDays === 1 ? '' : 's'}.` : 'A regular daily.');
+    const ul = $('reasons'); ul.innerHTML = '';
+    for (const x of [...r.reasons, ...r.accidents]) {
+      const li = document.createElement('li');
+      if (!data.kinds[x.kind]?.special) li.className = 'acc';
+      li.innerHTML = `<span class="tag">${x.label}${x.word ? ' · ' + x.word : ''}</span><br>${x.summary}`;
+      ul.appendChild(li);
+    }
+    $('cta').textContent = isToday ? "See today's answer →" : `See the ${r.label} answer →`;
+    $('cta').href = r.reasons.find((x) => x.pageUrl)?.pageUrl || data.todaysAnswerUrl;
+    $('slot').textContent = `Daily #${r.slot} of 366 in the fixed calendar`;
+    $('pick').value = iso(current);
+    document.title = `${r.special ? 'YES' : 'NO'} — Is ${r.label}'s Wordscapes Daily special?`;
+  }
+  $('prev').onclick = () => { current.setDate(current.getDate() - 1); render(); };
+  $('next').onclick = () => { current.setDate(current.getDate() + 1); render(); };
+  $('pick').onchange = (e) => { const d = new Date(e.target.value + 'T12:00:00'); if (!Number.isNaN(d.getTime())) { current = d; render(); } };
+  render();
+</script>
+</body>
+</html>
