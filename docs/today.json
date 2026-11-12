@@ -1,27 +1,19 @@
 {
-  "generatedAt": "2026-11-11T05:07:56.555Z",
-  "date": "11-11",
-  "label": "November 11",
+  "generatedAt": "2026-11-12T06:12:46.667Z",
+  "date": "11-12",
+  "label": "November 12",
   "special": false,
-  "slot": 316,
+  "slot": 317,
   "reasons": [],
-  "accidents": [
-    {
-      "kind": "accident",
-      "label": "Calendar accident",
-      "title": "Veterans Day serves RETIREE",
-      "summary": "The only date in the base calendar where the word and the day even come close. Probably still an accident.",
-      "word": "RETIREE"
-    }
-  ],
+  "accidents": [],
   "flagged": false,
   "next": {
     "date": "11-14",
     "label": "November 14",
     "title": "One of the 36 flagged dailies",
-    "inDays": 3
+    "inDays": 2
   },
   "todaysAnswerUrl": "https://www.solvingwordscapes.com/category/daily/",
   "sourceUrl": "https://www.solvingwordscapes.com/wordscapes-daily-puzzles-study/",
-  "line": "November 11: a regular Wordscapes daily. Next special daily: November 14 (One of the 36 flagged dailies), in 3 days."
+  "line": "November 12: a regular Wordscapes daily. Next special daily: November 14 (One of the 36 flagged dailies), in 2 days."
 }
