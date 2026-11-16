@@ -1,21 +1,19 @@
 {
-  "generatedAt": "2026-11-15T05:21:33.307Z",
-  "date": "11-15",
-  "label": "November 15",
-  "special": true,
-  "slot": 320,
-  "reasons": [
-    {
-      "kind": "flagged",
-      "label": "Flagged day",
-      "title": "One of the 36 flagged dailies",
-      "summary": "36 dailies a year carry an internal marker in the game data. It does not mean harder: flagged boards lean a touch friendlier. What the flag means is still an open question."
-    }
-  ],
+  "generatedAt": "2026-11-16T05:19:33.152Z",
+  "date": "11-16",
+  "label": "November 16",
+  "special": false,
+  "slot": 321,
+  "reasons": [],
   "accidents": [],
-  "flagged": true,
-  "next": null,
+  "flagged": false,
+  "next": {
+    "date": "11-19",
+    "label": "November 19",
+    "title": "One of the 36 flagged dailies",
+    "inDays": 3
+  },
   "todaysAnswerUrl": "https://www.solvingwordscapes.com/category/daily/",
   "sourceUrl": "https://www.solvingwordscapes.com/wordscapes-daily-puzzles-study/",
-  "line": "November 15: SPECIAL — One of the 36 flagged dailies"
+  "line": "November 16: a regular Wordscapes daily. Next special daily: November 19 (One of the 36 flagged dailies), in 3 days."
 }
